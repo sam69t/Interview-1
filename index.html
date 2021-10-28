@@ -1,0 +1,85 @@
+<html lang="en">
+  <head>
+    <script src="jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.js"></script>
+ 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  
+  </head>
+  <body>
+
+    <div class="regle">
+      <div class="instruction">
+        
+        <span>Les règles:</span> 
+        <div class="indication">
+          <span>	Piocher une carte au hasard
+          </span>
+          <span>		Répondre à la question en utilisant:</span>
+          <span>Texte</span>
+          <span>Croquis</span>
+          <span>Son</span>
+          <span>Repiocher une carte</span>
+          <span>Répondre à 15 questions</span>
+
+        </div>
+
+
+       
+ 
+        <br>
+      </div>
+
+        <span id="begin">Cliquer ici pour commencer</span> 
+
+    </div>
+    <header>
+      <div class>
+        <span class="rules"> Règles </span>
+
+      <span class="span-number"> Numéro de la question: </span>
+    </div>
+
+
+      <input  type="number"class="numb" id="text-val" rows="2" maxlength="2" value=""></input>
+      <div class="choose">
+        <img id="draw" class="draw-button"
+    src="assets/pencil.svg"
+    alt="un triangle aux trois côtés égaux"
+    height="17px"
+    width="10px" />
+    
+    <span id="write" class="write-text">T</span>
+    <img id="mic" class="record-mic"
+    src="assets/rec.png"
+    alt="un triangle aux trois côtés égaux"
+    height="37px"
+    width="100px" />
+        <!-- <div id="reset" class="draw-reset">Reset</div> -->
+      </div>
+    </header>
+
+    <div class="area">
+
+      <textarea class="text-area" id="text-val2" rows="10">
+Votre réponse</textarea
+      >
+      <div class="canvas" id="canvasHTML"></div>
+    </div>
+    <footer id="footer">
+      <input class="send" type="button" id="dwn-btn" value="Envoyer le text" />
+    </footer>
+    
+    <script src="script-vanilla.js"></script>
+    <script src="script-jquery.js"></script>  
+
+    <script src="script-p5.js" ></script>
+
+  </body>
+</html>

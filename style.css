@@ -1,0 +1,388 @@
+@font-face {
+  font-family: "Unica";
+  src: url("/assets/Unica77LL-Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  overflow: hidden !important;
+
+  font-family: "Unica";
+  font-size: 3vh;
+  margin: 5px;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+header {
+  letter-spacing: -1.5px;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: normal;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: flex-end;
+  height: 8vh;
+  padding-top: 0vh;
+}
+.choose {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 20vh;
+}
+
+.hide {
+  display: none;
+}
+.showing {
+  display: block !important;
+}
+.cursor {
+  cursor: url("/assets/cursor.cur"), auto;
+}
+
+#canvasHTML {
+  display: none;
+}
+
+.show {
+  display: flex !important;
+}
+.canvas {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60vh;
+  padding-top: 1.75vh;
+}
+canvas {
+  border-radius: 25px;
+}
+
+.area {
+  height: 70vh;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.reponse {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+
+.text-area {
+  width: 80%;
+  height: 70vh;
+  padding: 30vh 0;
+  outline: none !important;
+  border: 1px solid black;
+}
+.send {
+  height: 2vh;
+  display: none;
+  outline: none !important;
+  border: 1px solid black;
+  text-decoration: none;
+  background-color: white;
+  outline: none;
+  background: none;
+}
+.send:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.numb {
+  width: 10vw;
+  height: 5vh !important;
+  text-align: center;
+  margin-top: 2vh;
+  padding: 0 0px;
+  outline: none !important;
+  border: 1px solid black;
+
+  border-radius: 10px;
+}
+textarea#text-val.numb {
+  /* background-color: red;
+  height: 100px; */
+}
+.span-number {
+  padding-bottom: 1vh;
+}
+
+textarea {
+  resize: none;
+  font-family: "Unica";
+  font-size: 3vh;
+  border-radius: 30px;
+  padding: 20px;
+  text-align: center;
+}
+input {
+  font-family: "Unica";
+  width: 25vh;
+  font-size: 3vh;
+  padding: 1vh;
+  border-radius: 35px !important;
+  height: auto !important;
+  text-align: center;
+}
+
+.draw-button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  width: 3vh;
+  height: 3.5vh;
+
+  padding-top: 2vh;
+
+  z-index: 1000000;
+}
+.record-mic {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  width: 3vh;
+  height: 3.5vh;
+
+  padding-top: 2vh;
+
+  z-index: 1000000;
+}
+.record-mic:hover {
+  cursor: pointer;
+}
+.write-text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 3.5vh !important;
+  margin-bottom: 1vh;
+  width: 3vh;
+  height: 3.5vh;
+  font-size: 4vh;
+  font-family: "Times New Roman", Times, serif;
+  margin: 15px;
+
+  z-index: 1000000;
+
+  z-index: 1000000;
+}
+.draw-button:hover {
+  cursor: pointer;
+  /* border-radius: 20px;
+  border: 1px solid black; */
+}
+
+#clear {
+  display: none;
+  height: 6.4vh;
+  width: 28vh;
+  outline: none !important;
+  display: none;
+  border: 1px solid black;
+  text-decoration: none;
+  font-size: 3vh;
+  border-radius: 30px;
+
+  font-family: "Unica";
+  background-color: white;
+  outline: none;
+  left: 0px !important;
+  top: 0px !important;
+  background: none;
+  z-index: 100000;
+}
+#clear:hover {
+  background-color: black;
+  color: white;
+}
+.write-text:hover {
+  cursor: pointer;
+  /* border-radius: 20px;
+  border: 1px solid black; */
+}
+.choose img {
+  margin: 15px;
+}
+.press {
+  /* width: 5vh;
+  height: 7.7vh; */
+}
+img {
+  max-width: 100%;
+}
+.saveImage {
+  height: 6.4vh;
+  width: 28vh;
+  outline: none !important;
+  display: none;
+  border: 1px solid black;
+  text-decoration: none;
+  font-size: 3vh;
+  border-radius: 30px;
+
+  font-family: "Unica";
+  background-color: white;
+  outline: none;
+  left: 0px !important;
+  top: 0px !important;
+  background: none;
+  z-index: 100000;
+}
+.saveImage:hover {
+  background-color: black;
+  color: white;
+}
+.rec-button {
+  height: 6.4vh;
+  width: 28vh;
+  display: none;
+  margin-bottom: 42vh;
+  z-index: 10000000000;
+  outline: none !important;
+  border: 1px solid black;
+  text-decoration: none;
+  font-size: 3vh;
+  border-radius: 30px;
+  font-family: "Unica";
+  background-color: white;
+  outline: none;
+  left: 0px !important;
+  top: 0px !important;
+  z-index: 100000;
+}
+.rec-button:hover {
+  cursor: pointer;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+}
+
+.regle {
+  padding: 30px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  z-index: 9999999;
+  text-align: left;
+}
+
+.span-number:nth-child(2) {
+  margin-top: 2vh;
+}
+
+.instruction {
+  display: flex;
+  width: 95%;
+  font-size: 10vh;
+  height: 60vh;
+  padding: 2vh;
+  justify-content: flex-start;
+  align-items: flex-start;
+  line-height: 9.5vh;
+  letter-spacing: -6px;
+  border: 1px solid black;
+
+  flex-direction: column;
+}
+.indication {
+  font-size: 7vh;
+  line-height: 7vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.instruction span:nth-child(2) {
+  margin-left: 0vh;
+}
+.instruction span:nth-child(3) {
+  margin-left: 8vh;
+}
+.instruction span:nth-child(4) {
+  margin-left: 8vh;
+}
+.instruction span:nth-child(5) {
+  margin-left: 8vh;
+}
+/*
+.instruction span:nth-child(6) {
+  margin-left: 16vh;
+}
+.instruction span:nth-child(7) {
+  margin-left: 8vh;
+} */
+#begin {
+  display: flex;
+  width: 58vw;
+  font-size: 10vh;
+  height: 15vh;
+  margin-top: 8.5vh;
+  padding-left: 2vh;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 9.5vh;
+  letter-spacing: -6px;
+  border: 1px solid black;
+  border-radius: 10vh;
+
+  flex-direction: column;
+}
+#begin:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.instruction:hover {
+  background-color: black;
+  color: white;
+}
+
+.rules {
+  position: absolute;
+  left: 0;
+  font-size: 2vh;
+  margin-left: 2vh;
+  margin-top: 1vh;
+}
+
+.rules:hover {
+  cursor: pointer;
+  opacity: 0.2;
+}
