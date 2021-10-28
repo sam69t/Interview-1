@@ -316,7 +316,7 @@ img {
   justify-content: flex-start;
   align-items: flex-start;
   line-height: 9.5vh;
-  letter-spacing: -6px;
+  letter-spacing: -3px;
   border: 1px solid black;
 
   flex-direction: column;
