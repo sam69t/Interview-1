@@ -123,7 +123,7 @@ function saveAsCanvas() {
     // refreshPage();
     setTimeout(() => {
       window.location.reload();
-    }, 100);
+    }, 300);
   }
 
   console.log("save image");

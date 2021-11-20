@@ -181,6 +181,7 @@ input {
   border: 1px solid black;
   text-decoration: none;
   font-size: 3vh;
+  display: none;
   border-radius: 30px;
   height: auto !important;
   text-align: center;
