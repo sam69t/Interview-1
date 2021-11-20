@@ -2,32 +2,48 @@ let width = 1840;
 let height = 770;
 var mic, recorder, soundFile;
 var state = 0;
+let record = document.getElementById("record");
+
+let functionOnce = false;
 
 function setup() {
-  var canvas = createCanvas(1100, 500);
+  var canvas = createCanvas(1400, 600);
   canvas.parent("canvasHTML");
   background(255, 255, 255, 0);
 
+  video = createCapture(VIDEO);
+  video.position(0, 0);
+  video.size(700, 0);
+
   let footer = document.getElementById("footer");
+
   saveImageBtn = createButton("Envoyer le dessin");
   saveImageBtn.id("dwn-btn");
   clearCanvas = createButton("Effacer");
   clearCanvas.id("clear");
   clearCanvas.mousePressed(clearTheCanvas);
 
+  savePhotoUne = createButton("Envoyer la photo");
+  savePhotoUne.id("dwn-photo");
+
   recbutton = createButton("Enregistrer");
   recbutton.mousePressed(startRec);
   recbutton.class("rec-button");
-  recbutton.id("record");
+  recbutton.id("recording");
 
+  savePhotoUne.mousePressed(saveAsCanvas);
   saveImageBtn.mousePressed(saveAsCanvas);
   saveImageBtn.addClass("saveImage");
   let buttonWrapper = createDiv("");
   buttonWrapper.addClass("button-wrapper");
+
+  savePhotoUne.parent(footer);
   clearCanvas.parent(footer);
   buttonWrapper.parent(footer);
   saveImageBtn.parent(footer);
-  recbutton.parent(footer);
+  recbutton.parent(record);
+
+  video.hide();
 
   console.log("save");
 
@@ -50,23 +66,48 @@ function setup() {
 }
 
 function draw() {
-  if (mouseIsPressed) {
-    stroke(255);
-    fill(0);
+  if (canvasPhoto == true) {
+    isCanvasPhoto();
+  } else {
+  }
 
-    // These calls to triangle were unusual, and seemed to be mostly working by accident
-    //strokeWeight(30);
-    //triangle(mouseX, mouseY, pmouseX, pmouseY);
-    stroke(0);
-    strokeWeight(5);
-    //triangle(mouseX, mouseY, pmouseX, pmouseY);
-    line(mouseX, mouseY, pmouseX, pmouseY);
+  if (canvasDrawing == true) {
+    isCanvasDrawing();
   }
 }
 
 function clearTheCanvas() {
   clear();
   background(255);
+}
+
+function clearDrawing() {
+  clear();
+  background(255);
+  console.log("shot once");
+
+  functionOnce = true;
+  console.log(functionOnce);
+}
+
+function isCanvasPhoto() {
+  push();
+  translate(width, 0);
+  scale(-1, 1);
+  image(video, 800, 50);
+  pop();
+
+  console.log(functionOnce);
+}
+function isCanvasDrawing() {
+  if (!functionOnce) clearDrawing();
+
+  if (mouseIsPressed) {
+    stroke(0);
+    // stroke(255);
+    strokeWeight(15);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+  }
 }
 
 function saveAsCanvas() {
@@ -79,14 +120,17 @@ function saveAsCanvas() {
     clearTheCanvas();
     document.getElementById("text-val").value = "";
 
-    console.log("save image");
-
     // refreshPage();
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
   }
+
+  console.log("save image");
 }
 
 function windowResized() {
-  resizeCanvas(width, height);
+  // resizeCanvas(width, height);
 }
 
 // var mic, recorder, soundFile;
@@ -134,27 +178,25 @@ function startRec() {
     if (state === 0 && mic.enabled) {
       document.getElementById("text-val2").childNodes[0].nodeValue = "";
 
-      document.getElementById("record").childNodes[0].nodeValue = "Stop";
+      document.getElementById("recording").childNodes[0].nodeValue = "Stop";
       document
-        .getElementById("record")
+        .getElementById("recording")
         .style.setProperty("background-color", "red");
 
       // record to our p5.SoundFile
       recorder.record(soundFile);
       console.log("STATE  0");
-      background(255, 0, 0);
-      text("Recording!", 20, 20);
       state++;
     } else if (state === 1) {
-      document.getElementById("record").childNodes[0].nodeValue =
+      document.getElementById("recording").childNodes[0].nodeValue =
         "Terminer, cliquer pour envoyer";
       document
-        .getElementById("record")
+        .getElementById("recording")
         .style.setProperty("background-color", "transparent");
-      document.getElementById("record").style.setProperty("height", "10vh");
-      document.getElementById("record").style.setProperty("color", "black");
+      document.getElementById("recording").style.setProperty("height", "10vh");
+      document.getElementById("recording").style.setProperty("color", "black");
 
-      background(0, 255, 0);
+      // background(0, 255, 0);
       console.log("STATE  1");
       console.log(number);
 
@@ -162,7 +204,7 @@ function startRec() {
       // send result to soundFile
       recorder.stop();
 
-      text("Stopped", 20, 20);
+      // text("Stopped", 20, 20);
       state++;
     } else if (state === 2) {
       console.log("STATE  2");

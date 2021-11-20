@@ -1,6 +1,7 @@
 function refreshPage() {
   window.location.reload();
 }
+
 function download(filename, text) {
   var element = document.createElement("a");
   element.setAttribute(
