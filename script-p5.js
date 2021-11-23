@@ -7,7 +7,7 @@ let record = document.getElementById("record");
 let functionOnce = false;
 
 function setup() {
-  var canvas = createCanvas(1400, 600);
+  var canvas = createCanvas(1250, 600);
   canvas.parent("canvasHTML");
   background(255, 255, 255, 0);
 
