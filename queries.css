@@ -1,0 +1,9 @@
+/* ONLY DESKTOP */
+@media (max-width: 1024px) {
+  body > *:not(.disclaimer) {
+    display: none;
+  }
+  .disclaimer {
+    display: flex !important;
+  }
+}
