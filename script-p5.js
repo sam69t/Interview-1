@@ -4,6 +4,9 @@ var mic, recorder, soundFile;
 var state = 0;
 let record = document.getElementById("record");
 
+let colorPen = false;
+let colorWeight = false;
+
 let functionOnce = false;
 
 function setup() {
@@ -103,10 +106,26 @@ function isCanvasDrawing() {
   if (!functionOnce) clearDrawing();
 
   if (mouseIsPressed) {
-    stroke(0);
-    // stroke(255);
-    strokeWeight(15);
+    if (colorPen) {
+      stroke(255);
+    } else {
+      stroke(0);
+    }
+    if (colorWeight) {
+      strokeWeight(35);
+    } else {
+      strokeWeight(15);
+    }
+
     line(mouseX, mouseY, pmouseX, pmouseY);
+  }
+}
+function keyPressed() {
+  if (keyCode === 87) {
+    colorPen = !colorPen;
+  }
+  if (keyCode === 81) {
+    colorWeight = !colorWeight;
   }
 }
 
