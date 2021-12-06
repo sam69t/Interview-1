@@ -134,6 +134,8 @@ $(".logo-screenshot").click(function () {
 });
 
 $(".logo-text").click(function () {
+  $("#record-wrapper").css("display", "none");
+
   $(".logo-text").css("background-color", "black");
   $(".write-text").css({ filter: "invert()" });
 
@@ -148,6 +150,8 @@ $(".logo-text").click(function () {
 });
 
 $(".logo-mic").click(function () {
+  $("#record-wrapper").css("display", "flex");
+
   $(".logo-mic").css("background-color", "black");
   $(".record-mic").css({ filter: "invert()" });
 
