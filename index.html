@@ -1,7 +1,7 @@
 <html lang="en">
 
 <head>
-    <script src="jquery.js"></script>
+    <script src="/lib/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.js"></script>
@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Asking:</title>
     
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="queries.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/queries.css" />
 
 
 </head>
@@ -21,32 +21,8 @@
 <div class="disclaimer">
     <span>Only for desktop</span>
 </div>
-    <!-- <div class="regle">
-      <div class="instruction">
-        
-        <span>Les règles:</span> 
-        <div class="indication">
-          <span>	Piocher une carte au hasard
-          </span>
-          <span>		Répondre à la question en utilisant:</span>
-          <span>Texte</span>
-          <span>Croquis</span>
-          <span>Son</span>
-          <span>Repiocher une carte</span>
-          <span>Répondre à 15 questions</span>
-
-        </div>
-
-
-       
- 
-        <br>
-      </div>
-
-        <span id="begin">Cliquer ici pour commencer</span> 
-
-    </div> -->
-    <header>
+    
+ <header>
         <div class="header">
             <span class="span-number"> Numéro de la question </span>
         </div>
@@ -68,9 +44,15 @@
                 <img id="mic" class="record-mic" src="assets/Record.svg" alt="un triangle aux trois côtés égaux"
                     height="20px" width="20px" />
             </div>
+            <div class="logo-drop">
+                <img id="dragdrop" class="drop" src="assets/Drop.svg" alt="un triangle aux trois côtés égaux"
+                    height="20px" width="20px" />
+            </div>
         </div>
     </header>
-
+    <div id="image_drop_area">
+        <p class="drop-title">Glissez une image pour répondre à la question</p>
+   </div>    
     <div class="area">
 
         <textarea class="text-area" id="text-val2" spellcheck="false" rows="10">
@@ -83,10 +65,13 @@
         </div>
     </div>
     <footer id="footer">
+        <a id="download" class="drop-button">Envoyer l'image</a>
+
         <input class="send" type="button" id="dwn-btn" value="Envoyer le text" />
     </footer>
 
     <script src="script-vanilla.js"></script>
+    <script src="script-drag-drop"></script>
     <script src="script-jquery.js"></script>
     <script src="script-p5.js"></script>
     <script src="script-p5-webcam.js"></script>

@@ -106,6 +106,9 @@ $("button.rec-button").click(function () {
 });
 
 $(".logo-crayon").click(function () {
+  $("#image_drop_area").css("display", "none");
+  $(".drop-button").css("display", "none");
+
   $(".logo-crayon").css("background-color", "black");
   $(".draw-button").css({ filter: "invert()" });
 
@@ -117,9 +120,15 @@ $(".logo-crayon").click(function () {
 
   $(".logo-mic").css("background-color", "white");
   $(".record-mic").css({ filter: "none" });
+
+  $(".logo-drop").css("background-color", "white");
+  $(".drop").css({ filter: "none" });
 });
 
 $(".logo-screenshot").click(function () {
+  $("#image_drop_area").css("display", "none");
+  $(".drop-button").css("display", "none");
+
   $(".logo-screenshot").css("background-color", "black");
   $(".rec-photo").css({ filter: "invert()" });
 
@@ -131,10 +140,17 @@ $(".logo-screenshot").click(function () {
 
   $(".logo-mic").css("background-color", "white");
   $(".record-mic").css({ filter: "none" });
+
+  $(".logo-drop").css("background-color", "white");
+  $(".drop").css({ filter: "none" });
 });
 
 $(".logo-text").click(function () {
+  $(".text-area").css("display", "flex");
+
   $("#record-wrapper").css("display", "none");
+  $("#image_drop_area").css("display", "none");
+  $(".drop-button").css("display", "none");
 
   $(".logo-text").css("background-color", "black");
   $(".write-text").css({ filter: "invert()" });
@@ -147,13 +163,52 @@ $(".logo-text").click(function () {
 
   $(".logo-crayon").css("background-color", "white");
   $(".draw-button").css({ filter: "none" });
+
+  $(".logo-drop").css("background-color", "white");
+  $(".drop").css({ filter: "none" });
 });
 
 $(".logo-mic").click(function () {
   $("#record-wrapper").css("display", "flex");
+  $("#image_drop_area").css("display", "none");
+  $(".drop-button").css("display", "none");
 
   $(".logo-mic").css("background-color", "black");
   $(".record-mic").css({ filter: "invert()" });
+
+  $(".logo-drop").css("background-color", "white");
+  $(".drop").css({ filter: "none" });
+
+  $(".logo-screenshot").css("background-color", "white");
+  $(".rec-photo").css({ filter: "none" });
+
+  $(".logo-crayon").css("background-color", "white");
+  $(".draw-button").css({ filter: "none" });
+
+  $(".logo-text").css("background-color", "white");
+  $(".write-text").css({ filter: "none" });
+});
+$(".drop").click(function () {
+  $(".drop-button").css("display", "block");
+
+  $("#record-wrapper").css("display", "none");
+  $("#canvasHTML").css("display", "none");
+  $(".rec-button").css("display", "none");
+  $("#dwn-btn").css("display", "none");
+  $("#dwn-photo").css("display", "none");
+
+  $(".saveImage").css("display", "none");
+  $("#clear").css("display", "none");
+
+  $(".text-area").css("display", "none");
+
+  $("#image_drop_area").css("display", "flex");
+
+  $(".logo-drop").css("background-color", "black");
+  $(".drop").css({ filter: "invert()" });
+
+  $(".logo-mic").css("background-color", "white");
+  $(".record-mic").css({ filter: "none" });
 
   $(".logo-screenshot").css("background-color", "white");
   $(".rec-photo").css({ filter: "none" });

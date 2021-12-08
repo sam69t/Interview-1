@@ -189,6 +189,8 @@ function windowResized() {
 
 function startRec() {
   let number = document.getElementById("text-val").value;
+  let recordi = document.getElementById("recording");
+
   console.log(number);
   getAudioContext().resume();
   if (number == "") {
@@ -196,6 +198,7 @@ function startRec() {
   } else {
     if (state === 0 && mic.enabled) {
       document.getElementById("text-val2").childNodes[0].nodeValue = "";
+      $("#recording").addClass("record-animation");
 
       document.getElementById("recording").childNodes[0].nodeValue = "Stop";
       document
@@ -207,8 +210,10 @@ function startRec() {
       console.log("STATE  0");
       state++;
     } else if (state === 1) {
+      $("#recording").removeClass("record-animation");
+
       document.getElementById("recording").childNodes[0].nodeValue =
-        "Terminer, cliquer pour envoyer";
+        "Cliquer pour envoyer";
       document
         .getElementById("recording")
         .style.setProperty("background-color", "transparent");
