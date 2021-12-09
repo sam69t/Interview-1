@@ -26,7 +26,7 @@
         <div class="header">
             <span class="span-number"> Numéro de la question </span>
         </div>
-        <input type="number" class="numb" id="text-val" rows="2" maxlength="2" value=""></input>
+        <input type="number" class="numb" id="text-val" rows="2" maxlength="2" value="" onKeyPress="return check(event,value)" onInput="checkLength()"></input>
         <div class="choose">
             <div class="logo-crayon">
                 <img id="draw" class="draw-button" src="assets/Crayon.svg" alt="un triangle aux trois côtés égaux"
@@ -60,9 +60,7 @@
         <div class="canvas" id="canvasHTML"></div>
 
     </div>
-    <div id="record-wrapper">
         <div id="record">
-        </div>
     </div>
     <footer id="footer">
         <a id="download" class="drop-button">Envoyer l'image</a>
@@ -71,7 +69,9 @@
     </footer>
 
     <script src="script-vanilla.js"></script>
-    <script src="script-drag-drop"></script>
+    <script src="script-max-character-input.js"></script>
+    <script src="script-drag-drop.js"></script>
+    <script src="script-stimulate.js"></script>
     <script src="script-jquery.js"></script>
     <script src="script-p5.js"></script>
     <script src="script-p5-webcam.js"></script>

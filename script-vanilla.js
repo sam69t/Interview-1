@@ -36,6 +36,9 @@ document.getElementById("dwn-btn").addEventListener(
       download(filename, sum);
       document.getElementById("text-val").value = "";
       document.getElementById("text-val2").value = "Votre réponse";
+      setTimeout(() => {
+        window.location.reload();
+      }, 150);
     }
 
     console.log(text.length);

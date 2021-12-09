@@ -23,7 +23,7 @@ readImage = (file) => {
   const reader = new FileReader();
   let number = document.getElementById("text-val").value;
   if (number.length == 0) {
-    alert("whooo");
+    alert("Ecrire le numéro de la question");
   } else {
     reader.addEventListener("load", (event) => {
       uploaded_image = event.target.result;

@@ -200,7 +200,8 @@ function startRec() {
       document.getElementById("text-val2").childNodes[0].nodeValue = "";
       $("#recording").addClass("record-animation");
 
-      document.getElementById("recording").childNodes[0].nodeValue = "Stop";
+      document.getElementById("recording").childNodes[0].nodeValue =
+        "Enregistrement en cours, Cliquer pour arrêter";
       document
         .getElementById("recording")
         .style.setProperty("background-color", "red");
@@ -235,8 +236,11 @@ function startRec() {
 
       soundFile.play(); // play the result!
       save(soundFile, number + ".wav");
-      // refreshPage();
 
+      // refreshPage();
+      setTimeout(() => {
+        window.location.reload();
+      }, 150);
       state++;
     }
   }
