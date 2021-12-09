@@ -10,7 +10,7 @@ let colorWeight = false;
 let functionOnce = false;
 
 function setup() {
-  var canvas = createCanvas(1400, 500);
+  var canvas = createCanvas(1400, 475);
   canvas.parent("canvasHTML");
   background(255, 255, 255, 0);
 
@@ -114,7 +114,7 @@ function isCanvasDrawing() {
     if (colorWeight) {
       strokeWeight(35);
     } else {
-      strokeWeight(15);
+      strokeWeight(10);
     }
 
     line(mouseX, mouseY, pmouseX, pmouseY);

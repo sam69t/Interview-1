@@ -47,7 +47,7 @@ readImage = (file) => {
         // debugBase64(event.target.result);
         setTimeout(() => {
           window.location.reload();
-        }, 150);
+        }, 100);
       });
     });
   }
