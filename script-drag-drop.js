@@ -32,7 +32,7 @@ readImage = (file) => {
       ).style.backgroundImage = `url(${uploaded_image})`;
 
       $(".drop-title").css("display", "none");
-      $(".drop-button").css("display", "block");
+      // $(".drop-button").css("display", "block");
 
       $("#download").click(function (e) {
         $("#download").attr("download", number);

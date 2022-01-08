@@ -45,3 +45,34 @@ document.getElementById("dwn-btn").addEventListener(
   },
   false
 );
+// var url1 = "http://localhost:5501/JC2022";
+
+// if (url.search("JC2022") > -1) {
+//   alert("lol");
+//   window.location.href = "http://127.0.0.1:5501/identifier.html";
+
+//   // do your work
+// }
+
+var string = location.href;
+var convertedString = string.toLowerCase();
+
+// if (convertedString.indexOf("JC2022") != -1) {
+//   alert("url has franky");
+// } else {
+//   alert("url has no franky");
+// }
+
+if (window.location.hash) {
+  window.location.hash = "JC2022"; //set hash
+
+  $(".waiting-room").css("display", "none");
+
+  $(".identifier").css("display", "flex");
+
+  // Fragment exists
+} else {
+  $(".identifier").css("display", "none");
+
+  // Fragment doesn't exist
+}

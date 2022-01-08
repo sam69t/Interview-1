@@ -10,8 +10,11 @@ let colorWeight = false;
 let functionOnce = false;
 
 function setup() {
-  var canvas = createCanvas(1400, 475);
+  // var canvas = createCanvas(1400, 475);
+  let canvas = createCanvas(900, 430);
+
   canvas.parent("canvasHTML");
+  // background(255, 0, 0);
   background(255, 255, 255, 0);
 
   video = createCapture(VIDEO);
@@ -55,7 +58,6 @@ function setup() {
   // prompts user to enable their browser mic
 
   mic.start();
-  mic.start();
 
   // create a sound recorder
   recorder = new p5.SoundRecorder();
@@ -97,10 +99,10 @@ function isCanvasPhoto() {
   push();
   translate(width, 0);
   scale(-1, 1);
-  image(video, 800, 50);
+  image(video, 1050, -50);
   pop();
 
-  console.log(functionOnce);
+  // console.log(functionOnce);
 }
 function isCanvasDrawing() {
   if (!functionOnce) clearDrawing();
@@ -214,7 +216,7 @@ function startRec() {
       $("#recording").removeClass("record-animation");
 
       document.getElementById("recording").childNodes[0].nodeValue =
-        "Cliquer pour envoyer";
+        "Cliquer sur suivant pour finaliser votre réponse";
       document
         .getElementById("recording")
         .style.setProperty("background-color", "transparent");
@@ -232,16 +234,14 @@ function startRec() {
       // text("Stopped", 20, 20);
       state++;
     } else if (state === 2) {
-      console.log("STATE  2");
-
-      soundFile.play(); // play the result!
-      save(soundFile, number + ".wav");
-
-      // refreshPage();
-      setTimeout(() => {
-        window.location.reload();
-      }, 150);
-      state++;
+      // console.log("STATE  2");
+      // soundFile.play(); // play the result!
+      // save(soundFile, number + ".wav");
+      // // refreshPage();
+      // setTimeout(() => {
+      //   window.location.reload();
+      // }, 150);
+      // state++;
     }
   }
 }

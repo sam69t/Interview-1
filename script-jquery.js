@@ -25,6 +25,12 @@
 let canvasPhoto = false;
 let canvasDrawing = false;
 
+$(".logo-text").css("background-color", "white");
+$(".logo-screenshot").css("background-color", "white");
+$(".logo-mic").css("background-color", "white");
+$(".logo-drop").css("background-color", "white");
+$(".logo-crayon").css("background-color", "white");
+
 $("#begin").click(function () {
   $(".regle").css("display", "none");
 });
@@ -33,10 +39,11 @@ $(".rules").click(function () {
 });
 
 $("#photo").click(function () {
+  // $("#dwn-photo").css("display", "block");
+
   canvasPhoto = true;
   $(".text-area").css("z-index", "0");
 
-  $("#dwn-photo").css("display", "block");
   $("#canvasHTML").css("display", "flex");
 
   $(".rec-button").css("display", "none");
@@ -47,21 +54,21 @@ $("#photo").click(function () {
 });
 
 $("#draw").click(function () {
+  // $(".saveImage").css("display", "block");
+  // $("#clear").css("display", "block");
+
   $(".text-area").css("border", "none");
   $(".text-area").css("z-index", "0");
 
   canvasPhoto = false;
   canvasDrawing = true;
-  console.log("normal");
   document.getElementById("text-val2").value = "";
 
   // $("#canvasHTML").css("display", "flex");
   $("#canvasHTML").css("display", "flex");
   $(".draw-button").css("display", "flex");
-  $(".saveImage").css("display", "block");
   $(".rec-button").css("display", "none");
   $(".send").css("display", "none");
-  $("#clear").css("display", "block");
   $("#dwn-photo").css("display", "none");
 });
 
@@ -84,10 +91,12 @@ $(".record-mic").click(function () {
   $("#canvasHTML").css("display", "none");
 });
 $(".write-text").click(function () {
+  // $(".send").css("display", "block");
+
   $(".text-area").css("z-index", "99999999");
   $(".text-area").css("color", "black");
 
-  $(".text-area").css("border", "1px solid black");
+  // $(".text-area").css("border", "1px solid black");
 
   document.getElementById("text-val2").childNodes[0].nodeValue =
     "Votre réponse";
@@ -96,13 +105,16 @@ $(".write-text").click(function () {
   $(".saveImage").css("display", "none");
   $("#canvasHTML").css("display", "none");
 
-  $(".send").css("display", "block");
   $("#clear").css("display", "none");
   $("#dwn-photo").css("display", "none");
 });
 
 $("button.rec-button").click(function () {
   console.log("log");
+});
+
+$(".send-response").click(function () {
+  $(".text-area").css("z-index", "99999999");
 });
 
 $(".logo-crayon").click(function () {
@@ -189,7 +201,7 @@ $(".logo-mic").click(function () {
   $(".write-text").css({ filter: "none" });
 });
 $(".drop").click(function () {
-  $(".drop-button").css("display", "block");
+  // $(".drop-button").css("display", "block");
 
   $("#record-wrapper").css("display", "none");
   $("#canvasHTML").css("display", "none");
