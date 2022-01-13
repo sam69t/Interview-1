@@ -111,6 +111,7 @@ $(".button-back").click(function () {
 });
 
 $(".send-response").click(function () {
+  canvasPhoto = false;
   $(".STEP-3").css("display", "block");
   $(".button-back").css("display", "none");
 
@@ -118,6 +119,8 @@ $(".send-response").click(function () {
 });
 
 $(".uno").click(function () {
+  canvasPhoto = true;
+
   $(".button-back").css("display", "block");
 
   $(".STEP-3").css("display", "none");
@@ -127,7 +130,17 @@ $(".uno").click(function () {
 $(".logo-crayon").click(function () {
   clearTheCanvas();
 });
-$(".logo-screenshot").click(function () {});
+
+$(".draw-button").click(function () {
+  $(".erase").css("opacity", "1");
+  setTimeout(() => {
+    $(".erase").css("opacity", "0");
+  }, 5000);
+});
+
+$(".logo-screenshot").click(function () {
+  $(".erase").css("opacity", "0");
+});
 
 // $(".logo-screenshot").click(function () {
 //   $(".p5Canvas").addClass("fix");
@@ -158,6 +171,8 @@ $(".logo-crayon").click(function () {
   );
 });
 $(".logo-screenshot").click(function () {
+  $(".erase").css("opacity", "0");
+
   choice_screenshot = true;
 
   choice_crayon = false;
@@ -174,6 +189,8 @@ $(".logo-screenshot").click(function () {
   );
 });
 $(".logo-text").click(function () {
+  $(".erase").css("opacity", "0");
+
   choice_text = true;
 
   choice_screenshot = false;
@@ -191,6 +208,8 @@ $(".logo-text").click(function () {
 });
 
 $(".logo-mic").click(function () {
+  $(".erase").css("opacity", "0");
+
   choice_mic = true;
 
   choice_screenshot = false;
@@ -207,6 +226,8 @@ $(".logo-mic").click(function () {
   );
 });
 $(".drop").click(function () {
+  $(".erase").css("opacity", "0");
+
   choice_drop = true;
 
   choice_screenshot = false;
@@ -235,22 +256,34 @@ $(".duo").click(function () {
     console.log(filename, sum);
 
     download(filename, sum);
+    setTimeout(() => {
+      window.location.reload();
+    }, 150);
   }
 
   if (choice_crayon === true) {
     save(number);
     clearTheCanvas();
     console.log(number);
+    setTimeout(() => {
+      window.location.reload();
+    }, 150);
     // document.getElementById("text-val").value = "";
   }
   if (choice_mic === true) {
     save(soundFile, number + ".wav");
+    setTimeout(() => {
+      window.location.reload();
+    }, 150);
     // document.getElementById("text-val").value = "";
   }
   if (choice_screenshot === true) {
     save(number);
     clearTheCanvas();
     console.log(number);
+    setTimeout(() => {
+      window.location.reload();
+    }, 150);
   }
 
   if (choice_drop === true) {
@@ -259,6 +292,9 @@ $(".duo").click(function () {
     $("#download").click(function () {
       $("#download").attr("download", number);
       $("#download").attr("href", event.target.result);
+      setTimeout(() => {
+        window.location.reload();
+      }, 150);
     });
   }
 
@@ -275,6 +311,6 @@ $("#name").on("input", function (e) {
   }
 });
 
-$(".send-pass").click(function () {
-  $(".identifier").css("display", "none");
-});
+// $(".send-pass").click(function () {
+//   $(".identifier").css("display", "none");
+// });

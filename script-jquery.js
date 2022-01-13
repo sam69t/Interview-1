@@ -78,8 +78,10 @@ $(".record-mic").click(function () {
   $(".text-area").css("color", "white");
 
   $(".rec-button").css("display", "block");
-  $(".rec-button").css("background-color", "green");
-  $(".rec-button").css("color", "white");
+  // $(".rec-button").css("background-color", "green");
+  $(".rec-button").css("border", "1px solid black");
+
+  $(".rec-button").css("color", "black");
   $("#dwn-photo").css("display", "none");
 
   $("#clear").css("display", "none");

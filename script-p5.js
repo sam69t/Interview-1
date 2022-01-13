@@ -11,7 +11,7 @@ let functionOnce = false;
 
 function setup() {
   // var canvas = createCanvas(1400, 475);
-  let canvas = createCanvas(900, 430);
+  let canvas = createCanvas(1150, 600);
 
   canvas.parent("canvasHTML");
   // background(255, 0, 0);
@@ -99,7 +99,7 @@ function isCanvasPhoto() {
   push();
   translate(width, 0);
   scale(-1, 1);
-  image(video, 1050, -50);
+  image(video, 920, 50);
   pop();
 
   // console.log(functionOnce);
@@ -108,22 +108,25 @@ function isCanvasDrawing() {
   if (!functionOnce) clearDrawing();
 
   if (mouseIsPressed) {
+    stroke(0);
+    strokeWeight(15);
+
     if (colorPen) {
+      strokeWeight(100);
       stroke(255);
     } else {
       stroke(0);
     }
     if (colorWeight) {
-      strokeWeight(35);
+      // strokeWeight(35);
     } else {
-      strokeWeight(10);
     }
 
     line(mouseX, mouseY, pmouseX, pmouseY);
   }
 }
 function keyPressed() {
-  if (keyCode === 87) {
+  if (keyCode === 32) {
     colorPen = !colorPen;
   }
   if (keyCode === 81) {
@@ -204,9 +207,9 @@ function startRec() {
 
       document.getElementById("recording").childNodes[0].nodeValue =
         "Enregistrement en cours, Cliquer pour arrêter";
-      document
-        .getElementById("recording")
-        .style.setProperty("background-color", "red");
+      // document
+      //   .getElementById("recording")
+      //   .style.setProperty("background-color", "red");
 
       // record to our p5.SoundFile
       recorder.record(soundFile);

@@ -19,10 +19,24 @@
 
 <body>
     <div class="menu-title">
-        <div>Carte d'identité</div>
-        <div>ID&#8239;: ??872912</div>
+        <div>ID:&#8239;PS29228192</div>
+        <div>Carte d'identité © 2022</div>
 
     </div>
+
+    <!-- <div class="waiting-room">
+             <img  class="logo-web" src="assets/LOGO-WEB_2.svg" type="image/svg" alt="cool logo">
+
+    </div>
+    <div class="identifier">
+        <img  class="mini-logo-web" src="assets/LOGO-WEB_2.svg" type="image/svg" alt="cool logo">
+        <div class="pass">Veuillez inscrire le mot de passe</div>
+
+        <input type="text" id="name" name="name" required
+        minlength="4" maxlength="15" size="10">
+        <input class="send-pass"type="submit" value="Entrer"  onclick="window.location.href = 'http://localhost:5501'">
+
+</div> -->
 <div class="disclaimer">
     <span>Only for desktop</span>
 </div>
@@ -30,6 +44,7 @@
         <header>
         <div class="header">
             <span class="span-number"> Numéro de la question&#8239;: </span>
+            
         </div>
         <input type="number" class="numb" id="text-val" min="0" max="50"rows="2" maxlength="2" value="0" onKeyPress="return check(event,value)" onInput="checkLength()"></input>
         </header>
@@ -44,7 +59,9 @@
    </div>    
     <div class="area">
         <span class="response"> Répondre à la question&#8239;: </span>
-
+        <div class="erase">
+            Appuyer sur la barre espace pour la gomme
+        </div>
         <textarea class="text-area" id="text-val2" spellcheck="false" rows="10">
             </textarea>
         <div class="canvas" id="canvasHTML"></div>
@@ -81,7 +98,7 @@
         <div id="record">
          </div>
     <footer id="footer">
-        <a id="downlo   ad" class="drop-button">Envoyer l'image</a>
+        <a id="download" class="drop-button">Envoyer l'image</a>
 
         <input class="send" type="button" id="dwn-btn" value="Envoyer le text" />
     </footer>

@@ -9,7 +9,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carte d'identité:</title>
+    <title>Carte d'identité:Tools</title>
     
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css" />
@@ -20,7 +20,6 @@
 <body>
     <div class="menu-title">
         <div>Carte d'identité</div>
-        <div>ID&#8239;: ??872912</div>
 
     </div>
 
@@ -28,15 +27,15 @@
              <img  class="logo-web" src="assets/LOGO-WEB_2.svg" type="image/svg" alt="cool logo">
 
     </div>
-    <!-- <div class="identifier">
+    <div class="identifier">
         <img  class="mini-logo-web" src="assets/LOGO-WEB_2.svg" type="image/svg" alt="cool logo">
         <div class="pass">Veuillez inscrire le mot de passe</div>
 
         <input type="text" id="name" name="name" required
         minlength="4" maxlength="15" size="10">
-        <input class="send-pass"type="submit" value="Entrer">
+        <input class="send-pass"type="submit" value="Entrer"  onclick="window.location.href = '/tools.html'">
 
-</div> -->
+</div>
 <div class="disclaimer">
     <span>Only for desktop</span>
 </div>
@@ -58,9 +57,12 @@
    </div>    
     <div class="area">
         <span class="response"> Répondre à la question&#8239;: </span>
-
+        <div class="erase">
+            Appuyer sur la barre espace pour la gomme
+        </div>
         <textarea class="text-area" id="text-val2" spellcheck="false" rows="10">
             </textarea>
+           
         <div class="canvas" id="canvasHTML"></div>
         <div class="button-back">
             Retour
