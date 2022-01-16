@@ -109,10 +109,10 @@ function isCanvasDrawing() {
 
   if (mouseIsPressed) {
     stroke(0);
-    strokeWeight(15);
+    strokeWeight(7);
 
     if (colorPen) {
-      strokeWeight(100);
+      strokeWeight(50);
       stroke(255);
     } else {
       stroke(0);
