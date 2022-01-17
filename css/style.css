@@ -5,11 +5,6 @@
   font-style: normal;
 }
 
-/* @font-face {
-  font-family: "Corpo";
-  src: url("../css/GaramondCorporate-Regular.otf") format("otf");
-} */
-
 html {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
