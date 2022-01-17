@@ -64,7 +64,7 @@ var convertedString = string.toLowerCase();
 // }
 
 if (window.location.hash) {
-  window.location.hash = "JC2022"; //set hash
+  window.location.hash = "PS23131961"; //set hash
 
   $(".waiting-room").css("display", "none");
 

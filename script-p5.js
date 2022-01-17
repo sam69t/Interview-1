@@ -11,7 +11,7 @@ let functionOnce = false;
 
 function setup() {
   // var canvas = createCanvas(1400, 475);
-  let canvas = createCanvas(1150, 600);
+  let canvas = createCanvas(940, 500);
 
   canvas.parent("canvasHTML");
   // background(255, 0, 0);
@@ -99,7 +99,7 @@ function isCanvasPhoto() {
   push();
   translate(width, 0);
   scale(-1, 1);
-  image(video, 920, 50);
+  image(video, 1020, 0);
   pop();
 
   // console.log(functionOnce);

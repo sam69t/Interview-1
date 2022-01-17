@@ -304,7 +304,7 @@ $(".duo").click(function () {
 });
 
 $("#name").on("input", function (e) {
-  if ($(this).val() == "6969") {
+  if ($(this).val() == "822302") {
     $(".send-pass").css("display", "block");
   } else {
     $(".send-pass").css("display", "none");
