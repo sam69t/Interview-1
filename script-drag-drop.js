@@ -22,9 +22,7 @@ image_drop_area.addEventListener("drop", (event) => {
 readImage = (file) => {
   const reader = new FileReader();
   let number = document.getElementById("text-val").value;
-  if (number.length == 0) {
-    alert("Ecrire le numéro de la question");
-  } else {
+  if (choice_drop === true) {
     reader.addEventListener("load", (event) => {
       uploaded_image = event.target.result;
       document.querySelector(
@@ -34,9 +32,9 @@ readImage = (file) => {
       $(".drop-title").css("display", "none");
       // $(".drop-button").css("display", "block");
 
-      $("#download").click(function (e) {
-        $("#download").attr("download", number);
-        $("#download").attr("href", event.target.result);
+      $("#downloaded").click(function (e) {
+        $("#downloaded").attr("download", number);
+        $("#downloaded").attr("href", event.target.result);
 
         console.log("click");
         /**

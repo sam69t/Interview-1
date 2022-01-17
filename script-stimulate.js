@@ -287,14 +287,15 @@ $(".duo").click(function () {
   }
 
   if (choice_drop === true) {
-    console.log("DROP");
+    $("#downloaded").click(function () {
+      $("#downloaded").attr("download", number);
+      $("#downloaded").attr("href", event.target.result);
+      // setTimeout(() => {
+      //   window.location.reload();
+      // }, 150);
+      // console.log(number, event.target.result);
 
-    $("#download").click(function () {
-      $("#download").attr("download", number);
-      $("#download").attr("href", event.target.result);
-      setTimeout(() => {
-        window.location.reload();
-      }, 150);
+      // console.log("DROP");
     });
   }
 

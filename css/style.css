@@ -9,6 +9,7 @@ html {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   -webkit-text-stroke: 0.3pt;
+  margin: 0;
 }
 .disclaimer {
   width: 100%;
@@ -806,7 +807,7 @@ select:focus {
 }
 
 #name {
-  border: solid 2px;
+  border: solid 1px;
 
   border-color: black;
 }
