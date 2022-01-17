@@ -68,6 +68,7 @@ footer {
   padding-top: 0vh;
 }
 .choose {
+  padding: 2vh;
   padding-top: 3vh;
   height: 6vh;
   display: flex;
@@ -749,6 +750,7 @@ header {
   right: 0;
   width: 97%;
   margin: auto;
+
   justify-content: space-between;
 }
 
@@ -798,6 +800,7 @@ header {
   height: 5vh;
   width: 10vh;
   border: black;
+
   background-color: white;
 }
 .send-pass:hover {
@@ -808,4 +811,10 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
+}
+
+#name {
+  border: solid 2px;
+
+  border-color: black;
 }
